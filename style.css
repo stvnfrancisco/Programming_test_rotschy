@@ -1,0 +1,131 @@
+body {
+	background-color: #a3a3a3;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+h3 {
+	color: #a0001a;
+	font-family: Shadows Into Light, serif;
+	font-size: 3em;
+	margin: .3em 0;
+	font-weight: normal;
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+		text-align: left;
+		line-height: 1em;
+}
+
+ul li p {
+	color: #ffffff;
+	line-height: 1em;
+}
+
+ ul > li {
+	color: #595959;
+}
+
+a {
+	color: #ffffff;
+}
+
+#column-one-header {
+	padding-left: 45px;
+}
+
+#column-two-header {
+	padding-left: 300px;
+}
+
+#side-container {
+	margin-top: 0px;
+	background-color: #595959;
+	width: 25%;
+	padding: 5px 5px 5px 5px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+}
+
+#right-side-container {
+	margin-top: 50px;
+	background-color: #a3a3a3;
+	width: 35%;
+}
+
+#wrapper {
+    width: 2200px;
+    transform: translate3d(0, 0, 0);
+}
+
+.content {
+    float: left;
+    width: 550px;
+    height: 350px;
+		-webkit-border-radius: 20px 20px 20px 20px;
+    background-repeat: no-repeat;
+}
+
+#itemOne {
+    background-color: #ffffff;
+    background-image: url("http://rotschyinc.com/images/Timmens-Road/1-timmens.jpg");
+}
+#itemTwo {
+    background-color: #ffffff;
+    background-image: url("http://rotschyinc.com/images/Timmens-Road/2-timmens.jpg");
+}
+#itemThree {
+    background-color: #ffffff;
+    background-image: url("http://rotschyinc.com/images/Timmens-Road/3-timmens.jpg");
+}
+
+#contentContainer {
+    width: 550px;
+    overflow: hidden;
+}
+
+#navLinks {
+    text-align: center;
+    width: 550px;
+}
+
+#navLinks ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+#navLinks ul li {
+    float: left;
+    text-align: center;
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+    border: black 1px solid;
+}
+
+#column1 {
+  float: left;
+  margin: 0px;
+  width: 85%;
+	padding-left: 40px;
+}
+
+#column2 {
+  float: left;
+  margin: 27%;
+  width: auto;
+  margin-top: -478px;
+}
+
+#column3 {
+	float: right;
+	margin: -520px;
+	width: 85%;
+	margin-top: -445px;
+	padding-right: 30px;
+}

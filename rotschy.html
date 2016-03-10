@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Timmens Road Project</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css" media="screen and (max-width: 900px)">
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<h3><div id="column-one-header">Heavy Civil<br>Projects</div></h3>
+	<div id="column1">
+  		<div id="side-container">
+  			<ul>
+  				<li><p><a href="#">NE 134th St Interchange<br>(I-5/I-205) Stage 1</p></a></li>
+  				<li><p><a href="#">NE 88th Street</p></a></li>
+  				<li><p><a href="#">Timmens Road</p></a></li>
+  				<li><p><a href="#">I-5 to Battle Ground, Add<br>Lane, Stage 2</p></a></li>
+  				<li><p><a href="#">Timmens Road</p></a></li>
+  				<li><p><a href="#">NE 18th Street Improvements</p></a></li>
+  				<li><p><a href="#">SVID Milepost 37.10<br>Reservoir</p></a></li>
+  			</ul>
+  		</div>
+    </div>
+
+<div id="column2">
+  <h3><div id="column-two-header">Timmens Road</div></h3>
+  <div id="contentContainer">
+
+  	<div id="wrapper">
+
+	    <div id="itemOne" class="content"></div>
+
+	    <div id="itemTwo" class="content"></div>
+
+	    <div id="itemThree" class="content"></div>
+
+  </div>
+</div>
+
+
+
+<div id="navLinks">
+    <ul>
+      <li class="itemLinks" data-pos="0px"></li>
+      <li class="itemLinks" data-pos="-550px"></li>
+      <li class="itemLinks" data-pos="-1100px"></li>
+    </ul>
+</div>
+
+<div id="column3">
+	<div id="right-side-container">
+		<p><font color="#a0001a;">Completed</font> Oct 2013<br>
+		$4,098,775<br><font color="#a0001a;">Location:</font> LaCenter WA<br>
+		<font color="#a0001a;">Owner:</font> Clark County<br>Project includes
+		roadwat overlay for the two travel lanes,<br>a north bound right turn lane on Timmen Rd, a<br>
+		westbound left turn lane on LaCenter Rd, lmited<br>gaurdrail updates, crushing the existing PCC
+		panels and<br>recycle the materials as roadway base, install 24"<br> waterline, pave the tn foot
+		travel lane with 5in HMA.</p>
+	</div>
+</div>
+
+<script>
+//querying the DOM
+var links = document.querySelectorAll(".itemLinks");
+var wrapper = document.querySelector("#wrapper");
+
+// the activeLink provides a pointer to the currently displayed item
+var activeLink = 0;
+
+// setup the event listeners
+for (var i = 0; i < links.length; i++) {
+  var link = links[i];
+  link.addEventListener('click', setClickedItem, false);
+
+  // identify the item for the activeLink
+  link.itemID = i;
+}
+
+// set first item as active
+links[activeLink].classList.add("active");
+
+function setClickedItem(e) {
+  removeActiveLinks();
+
+  var clickedLink = e.target;
+  activeLink = clickedLink.itemID;
+
+  changePosition(clickedLink);
+}
+
+function removeActiveLinks() {
+  for (var i = 0; i < links.length; i++) {
+      links[i].classList.remove("active");
+  }
+}
+
+// Handle changing the slider position as well as ensure
+// the correct link is highlighted as being active
+function changePosition(link) {
+  var position = link.getAttribute("data-pos");
+
+  var translateValue = "translate3d(" + position + ", 0px, 0)";
+  wrapper.style[transformProperty] = translateValue;
+
+  link.classList.add("active");
+}
+
+// Dealing with Transforms
+var transforms = ["transform",
+          "msTransform",
+          "webkitTransform",
+          "mozTransform",
+          "oTransform"];
+
+var transformProperty = getSupportedPropertyName(transforms);
+
+// vendor prefix management
+function getSupportedPropertyName(properties) {
+  for (var i = 0; i < properties.length; i++) {
+      if (typeof document.body.style[properties[i]] != "undefined") {
+          return properties[i];
+      }
+  }
+  return null;
+}
+</script>
+
+</body>
+</html>
